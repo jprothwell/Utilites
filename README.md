@@ -22,7 +22,7 @@ pod 'Utilites'
 
 ## Author
 
-jprothwell@gmail.com, jprothwell@gmail.com
+Leon
 
 ## License
 
