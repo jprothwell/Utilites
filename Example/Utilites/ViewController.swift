@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         //btn.cornerRadius = 5
         btn.backgroundColor = .green
         btn.roundCorner(rectCorner:[.topLeft,.topRight], radius: 10)
+
         self.view.addSubview(btn)
     }
     

@@ -220,7 +220,7 @@ import QuartzCore
 
 @objc public extension UIView {
     
-    @objc public func roundCorner(rectCorner:UIRectCorner,radius:CGFloat) -> Void {
+    @objc public func roundCorner(rectCorner:UIRectCorner = .allCorners,radius:CGFloat) -> Void {
         let rect = self.bounds
         let maskPath = UIBezierPath(roundedRect: rect, byRoundingCorners: rectCorner, cornerRadii: CGSize(width: radius, height: radius))
         let maskLayer = CAShapeLayer()
