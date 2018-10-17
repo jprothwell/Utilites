@@ -1,9 +1,9 @@
 import UIKit
 
-public extension UITabBarController {
+@objc public extension UITabBarController {
     
     @discardableResult
-    public func replaceViewController(_ viewController:UIViewController, atIndex index:(Int)) -> Bool {
+    @objc public func replaceViewController(_ viewController:UIViewController, atIndex index:(Int)) -> Bool {
         var ret = false
         if let vcs = self.viewControllers, vcs.count > index {
             var nvcs = self.viewControllers!

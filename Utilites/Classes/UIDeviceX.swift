@@ -15,31 +15,31 @@ public struct iOSVersion {
 }
 
 /** Model Extends UIDevice */
-public extension UIDevice {
+@objc public extension UIDevice {
     
     //systeme version compare methods
     
-    public class func SYSTEM_VERSION_EQUAL_TO(_ version: String) -> Bool {
+    @objc public class func SYSTEM_VERSION_EQUAL_TO(_ version: String) -> Bool {
         return self.current.systemVersion.compare(version as String,
                                                   options: .numeric) == .orderedSame
     }
     
-    public class func SYSTEM_VERSION_GREATER_THAN(_ version: String) -> Bool {
+    @objc public class func SYSTEM_VERSION_GREATER_THAN(_ version: String) -> Bool {
         return self.current.systemVersion.compare(version as String,
                                                   options: .numeric) == .orderedDescending
     }
     
-    public class func SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(_ version: String) -> Bool {
+    @objc public class func SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(_ version: String) -> Bool {
         return self.current.systemVersion.compare(version as String,
                                                   options: .numeric) != .orderedAscending
     }
     
-    public class func SYSTEM_VERSION_LESS_THAN(_ version: String) -> Bool {
+    @objc public class func SYSTEM_VERSION_LESS_THAN(_ version: String) -> Bool {
         return UIDevice.current.systemVersion.compare(version as String,
                                                       options: .numeric) == .orderedAscending
     }
     
-    public class func SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(_ version: String) -> Bool {
+    @objc public class func SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(_ version: String) -> Bool {
         return self.current.systemVersion.compare(version as String,
                                                   options: .numeric) != .orderedDescending
     }

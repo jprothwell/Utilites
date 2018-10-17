@@ -1,11 +1,10 @@
 import UIKit
 
-public extension UIView {
+@objc public extension UIView {
     // MARK: - Basic Properties
     
     /// X Axis value of UIView.
-    @objc
-    var x: CGFloat {
+    @objc public var x: CGFloat {
         set { self.frame = CGRect(x: _pixelIntegral(newValue),
                                   y: self.y,
                                   width: self.width,
@@ -15,8 +14,7 @@ public extension UIView {
     }
     
     /// Y Axis value of UIView.
-    @objc
-    var y: CGFloat {
+    @objc public var y: CGFloat {
         set { self.frame = CGRect(x: self.x,
                                   y: _pixelIntegral(newValue),
                                   width: self.width,
@@ -26,8 +24,7 @@ public extension UIView {
     }
     
     /// Width of view.
-    @objc
-    var width: CGFloat {
+    @objc public var width: CGFloat {
         set { self.frame = CGRect(x: self.x,
                                   y: self.y,
                                   width: _pixelIntegral(newValue),
@@ -37,8 +34,7 @@ public extension UIView {
     }
     
     /// Height of view.
-    @objc
-    var height: CGFloat {
+    @objc public var height: CGFloat {
         set { self.frame = CGRect(x: self.x,
                                   y: self.y,
                                   width: self.width,
@@ -50,8 +46,7 @@ public extension UIView {
     // MARK: - Origin and Size
     
     /// View's Origin point.
-    @objc
-    var origin: CGPoint {
+    @objc public var origin: CGPoint {
         set { self.frame = CGRect(x: _pixelIntegral(newValue.x),
                                   y: _pixelIntegral(newValue.y),
                                   width: self.width,
@@ -61,8 +56,7 @@ public extension UIView {
     }
     
     /// View's size.
-    @objc
-    var size: CGSize {
+    @objc public var size: CGSize {
         set { self.frame = CGRect(x: self.x,
                                   y: self.y,
                                   width: _pixelIntegral(newValue.width),
@@ -74,58 +68,50 @@ public extension UIView {
     // MARK: - Extra Properties
     
     /// View's right side (x + width).
-    @objc
-    var right: CGFloat {
+    @objc public var right: CGFloat {
         set { self.x = newValue - self.width }
         get { return self.x + self.width }
     }
     
     /// View's bottom (y + height).
-    @objc
-    var bottom: CGFloat {
+    @objc public var bottom: CGFloat {
         set { self.y = newValue - self.height }
         get { return self.y + self.height }
     }
     
     /// View's top (y).
-    @objc
-    var top: CGFloat {
+    @objc public var top: CGFloat {
         set { self.y = newValue }
         get { return self.y }
     }
     
     /// View's left side (x).
-    @objc
-    var left: CGFloat {
+    @objc public var left: CGFloat {
         set { self.x = newValue }
         get { return self.x }
     }
     
     /// View's center X value (center.x).
-    @objc
-    var centerX: CGFloat {
+    @objc public var centerX: CGFloat {
         set { self.center = CGPoint(x: newValue, y: self.centerY) }
         get { return self.center.x }
     }
     
     /// View's center Y value (center.y).
-    @objc
-    var centerY: CGFloat {
+    @objc public var centerY: CGFloat {
         set { self.center = CGPoint(x: self.centerX, y: newValue) }
         get { return self.center.y }
     }
     
     /// Last subview on X Axis.
-    @objc
-    var lastSubviewOnX: UIView? {
+    @objc public var lastSubviewOnX: UIView? {
         return self.subviews.reduce(UIView(frame: .zero)) {
             return $1.x > $0.x ? $1 : $0
         }
     }
     
     /// Last subview on Y Axis.
-    @objc
-    var lastSubviewOnY: UIView? {
+    @objc public var lastSubviewOnY: UIView? {
         return self.subviews.reduce(UIView(frame: .zero)) {
             return $1.y > $0.y ? $1 : $0
         }
@@ -134,8 +120,7 @@ public extension UIView {
     // MARK: - Bounds Methods
     
     /// X value of bounds (bounds.origin.x).
-    @objc
-    var boundsX: CGFloat {
+    @objc public var boundsX: CGFloat {
         set { self.bounds = CGRect(x: _pixelIntegral(newValue),
                                    y: self.boundsY,
                                    width: self.boundsWidth,
@@ -145,8 +130,7 @@ public extension UIView {
     }
     
     /// Y value of bounds (bounds.origin.y).
-    @objc
-    var boundsY: CGFloat {
+    @objc public var boundsY: CGFloat {
         set { self.frame = CGRect(x: self.boundsX,
                                   y: _pixelIntegral(newValue),
                                   width: self.boundsWidth,
@@ -156,8 +140,7 @@ public extension UIView {
     }
     
     /// Width of bounds (bounds.size.width).
-    @objc
-    var boundsWidth: CGFloat {
+    @objc public var boundsWidth: CGFloat {
         set { self.frame = CGRect(x: self.boundsX,
                                   y: self.boundsY,
                                   width: _pixelIntegral(newValue),
@@ -167,8 +150,7 @@ public extension UIView {
     }
     
     /// Height of bounds (bounds.size.height).
-    @objc
-    var boundsHeight: CGFloat {
+    @objc public var boundsHeight: CGFloat {
         set { self.frame = CGRect(x: self.boundsX,
                                   y: self.boundsY,
                                   width: self.boundsWidth,
@@ -180,8 +162,7 @@ public extension UIView {
     // MARK: - Useful Methods
     
     /// Center view to it's parent view.
-    @objc
-    func centerToParent() {
+    @objc public func centerToParent() {
         guard let superview = self.superview else { return }
         
         switch UIApplication.shared.statusBarOrientation {
