@@ -1,4 +1,5 @@
 import UIKit
+import QuartzCore
 
 @objc public extension UIView {
     // MARK: - Basic Properties
@@ -215,4 +216,16 @@ import UIKit
         }
     }
     
+}
+
+@objc public extension UIView {
+    
+    @objc public func roundCorner(rectCorner:UIRectCorner,radius:CGFloat) -> Void {
+        let rect = self.bounds
+        let maskPath = UIBezierPath(roundedRect: rect, byRoundingCorners: rectCorner, cornerRadii: CGSize(width: radius, height: radius))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = rect
+        maskLayer.path = maskPath.cgPath
+        self.layer.mask = maskLayer
+    }
 }

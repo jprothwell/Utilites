@@ -22,8 +22,9 @@ class ViewController: UIViewController {
         btn.frame = CGRect(x: 0, y: 100, width: 100, height: 100)
         btn.setTitle("test", for: .normal)
         btn.addTarget(self, action: #selector(onButton), for: .touchUpInside)
-        btn.cornerRadius = 5
+        //btn.cornerRadius = 5
         btn.backgroundColor = .green
+        btn.roundCorner(rectCorner:[.topLeft,.topRight], radius: 10)
         self.view.addSubview(btn)
     }
     
