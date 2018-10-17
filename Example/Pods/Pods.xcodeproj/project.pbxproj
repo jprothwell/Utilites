@@ -18,6 +18,7 @@
 		B47E9977F981B51B83DB9E41987F7750 /* Pods-Utilites_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8DFF8F9DF4BC3EF3975C51A1836062 /* Pods-Utilites_Example-dummy.m */; };
 		C6B385CE2175D71A0037298F /* UIDeviceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B385CC2175D7190037298F /* UIDeviceX.swift */; };
 		C6B385CF2175D71A0037298F /* UITabBarControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B385CD2175D7190037298F /* UITabBarControllerX.swift */; };
+		C6B385D12176D1740037298F /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B385D02176D1740037298F /* UIViewX.swift */; };
 		EEFDB103B9DDD32EA5443C5FA313FBDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		C1FFF5D14F5F33C45C032E4C0FE32530 /* Utilites.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Utilites.modulemap; sourceTree = "<group>"; };
 		C6B385CC2175D7190037298F /* UIDeviceX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceX.swift; path = Utilites/Classes/UIDeviceX.swift; sourceTree = "<group>"; };
 		C6B385CD2175D7190037298F /* UITabBarControllerX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarControllerX.swift; path = Utilites/Classes/UITabBarControllerX.swift; sourceTree = "<group>"; };
+		C6B385D02176D1740037298F /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		D4D19F4E5B3B345986495A4FCF9DB311 /* Pods-Utilites_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Utilites_Example.modulemap"; sourceTree = "<group>"; };
 		DC387E4E17D21D1D32D229FA3D23EE48 /* Utilites.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Utilites.xcconfig; sourceTree = "<group>"; };
 		EE3B044CB5057266257D4407267F6872 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				7D17E47B86CCDDD715B244F6DB3DD084 /* Utilites.swift */,
 				C6B385CC2175D7190037298F /* UIDeviceX.swift */,
 				C6B385CD2175D7190037298F /* UITabBarControllerX.swift */,
+				C6B385D02176D1740037298F /* UIViewX.swift */,
 				FDB82CD6364391C00BB40E1FE2017A76 /* Pod */,
 				3BC5F9400E457380849EEF65CD1B30E2 /* Support Files */,
 			);
@@ -373,6 +376,7 @@
 				B3BAC0D58B7B69FB94FC945A9500E144 /* Utilites.swift in Sources */,
 				A5F561E80C8121B17334C54CE7297522 /* Utilites-dummy.m in Sources */,
 				C6B385CF2175D71A0037298F /* UITabBarControllerX.swift in Sources */,
+				C6B385D12176D1740037298F /* UIViewX.swift in Sources */,
 				C6B385CE2175D71A0037298F /* UIDeviceX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
