@@ -13,12 +13,12 @@ public let kAppleLanguage = (UserDefaults.standard.array(forKey: "AppleLanguages
 public let kAppVersion = (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""
 
 public let kScreenSize = UIScreen.main.bounds.size
-public let kScreenScale = Float(UIScreen.main.scale)
-public let kScreenWidth = Float(kScreenSize.width)
-public let kScreenHeight = Float(kScreenSize.height)
+public let kScreenScale = UIScreen.main.scale
+public let kScreenWidth = kScreenSize.width
+public let kScreenHeight = kScreenSize.height
 
 
-public func PixelToFloat(_ p:Float) -> Float{
+public func PixelToFloat(_ p:CGFloat) -> CGFloat{
     return p/kScreenScale
 }
 
