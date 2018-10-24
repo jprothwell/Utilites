@@ -30,7 +30,9 @@ class ViewController: UIViewController {
     }
     
     @objc func onButton() -> Void {
-        self.tabBarController?.replaceViewController(UIViewController(), atIndex: 0)
+        self.tabBarController?.tabBar.hideTopLine()
+        
+        self.navigationController?.navigationBar.hideBottomLine()
     }
 
     override func didReceiveMemoryWarning() {
