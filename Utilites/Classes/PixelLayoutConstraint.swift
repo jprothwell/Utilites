@@ -1,13 +1,14 @@
 //
-//  NSLayoutConstraintX.swift
-//  Utilites
+//  PixelLayoutConstraint.swift
+//  Utilites_Example
 //
 //  Created by LeonJing on 2018/10/29.
+//  Copyright © 2018 CocoaPods. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-extension NSLayoutConstraint {
+class PixelLayoutConstraint: NSLayoutConstraint {
     @IBInspectable var pixelConstant: Int {
         get {
             return Int(constant * UIScreen.main.scale)
