@@ -18,6 +18,7 @@
 		B47E9977F981B51B83DB9E41987F7750 /* Pods-Utilites_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8DFF8F9DF4BC3EF3975C51A1836062 /* Pods-Utilites_Example-dummy.m */; };
 		C6256860218024D200E37A58 /* UITabBarX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625685F218024D200E37A58 /* UITabBarX.swift */; };
 		C62568622180493200E37A58 /* UINavigationBarX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62568612180493200E37A58 /* UINavigationBarX.swift */; };
+		C66858332186CC870090307A /* NSLayoutConstraintX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66858322186CC870090307A /* NSLayoutConstraintX.swift */; };
 		C6B385CE2175D71A0037298F /* UIDeviceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B385CC2175D7190037298F /* UIDeviceX.swift */; };
 		C6B385CF2175D71A0037298F /* UITabBarControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B385CD2175D7190037298F /* UITabBarControllerX.swift */; };
 		C6B385D32176D3200037298F /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B385D22176D3200037298F /* UIViewX.swift */; };
@@ -76,6 +77,7 @@
 		C1FFF5D14F5F33C45C032E4C0FE32530 /* Utilites.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Utilites.modulemap; sourceTree = "<group>"; };
 		C625685F218024D200E37A58 /* UITabBarX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITabBarX.swift; path = Utilites/Classes/UITabBarX.swift; sourceTree = "<group>"; };
 		C62568612180493200E37A58 /* UINavigationBarX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UINavigationBarX.swift; path = Utilites/Classes/UINavigationBarX.swift; sourceTree = "<group>"; };
+		C66858322186CC870090307A /* NSLayoutConstraintX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSLayoutConstraintX.swift; path = Utilites/Classes/NSLayoutConstraintX.swift; sourceTree = "<group>"; };
 		C6B385CC2175D7190037298F /* UIDeviceX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceX.swift; path = Utilites/Classes/UIDeviceX.swift; sourceTree = "<group>"; };
 		C6B385CD2175D7190037298F /* UITabBarControllerX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarControllerX.swift; path = Utilites/Classes/UITabBarControllerX.swift; sourceTree = "<group>"; };
 		C6B385D22176D3200037298F /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewX.swift; path = Utilites/Classes/UIViewX.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				C6B385D22176D3200037298F /* UIViewX.swift */,
 				C625685F218024D200E37A58 /* UITabBarX.swift */,
 				C62568612180493200E37A58 /* UINavigationBarX.swift */,
+				C66858322186CC870090307A /* NSLayoutConstraintX.swift */,
 				FDB82CD6364391C00BB40E1FE2017A76 /* Pod */,
 				3BC5F9400E457380849EEF65CD1B30E2 /* Support Files */,
 			);
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66858332186CC870090307A /* NSLayoutConstraintX.swift in Sources */,
 				C62568622180493200E37A58 /* UINavigationBarX.swift in Sources */,
 				B3BAC0D58B7B69FB94FC945A9500E144 /* Utilites.swift in Sources */,
 				A5F561E80C8121B17334C54CE7297522 /* Utilites-dummy.m in Sources */,

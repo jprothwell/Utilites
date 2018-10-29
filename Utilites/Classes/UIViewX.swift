@@ -229,3 +229,12 @@ import QuartzCore
         self.layer.mask = maskLayer
     }
 }
+
+@objc public extension UIView {
+    @objc public func addSubviews(_ subviews: [UIView]) {
+        subviews.forEach { addSubview($0) }
+    }
+    @objc public func removeSubviews() {
+        subviews.forEach({ $0.removeFromSuperview() })
+    }
+}
