@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         btn.roundCorner(rectCorner:[.topLeft,.topRight], radius: 10)
 
         self.view.addSubview(btn)
+        
     }
     
     @objc func onButton() -> Void {

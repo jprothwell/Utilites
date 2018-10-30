@@ -19,6 +19,7 @@
 		C6256860218024D200E37A58 /* UITabBarX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625685F218024D200E37A58 /* UITabBarX.swift */; };
 		C62568622180493200E37A58 /* UINavigationBarX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62568612180493200E37A58 /* UINavigationBarX.swift */; };
 		C66858452187103D0090307A /* PixelLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66858442187103D0090307A /* PixelLayoutConstraint.swift */; };
+		C66858522187F0580090307A /* UITableViewCellX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66858512187F0580090307A /* UITableViewCellX.swift */; };
 		C6B385CE2175D71A0037298F /* UIDeviceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B385CC2175D7190037298F /* UIDeviceX.swift */; };
 		C6B385CF2175D71A0037298F /* UITabBarControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B385CD2175D7190037298F /* UITabBarControllerX.swift */; };
 		C6B385D32176D3200037298F /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B385D22176D3200037298F /* UIViewX.swift */; };
@@ -78,6 +79,7 @@
 		C625685F218024D200E37A58 /* UITabBarX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITabBarX.swift; path = Utilites/Classes/UITabBarX.swift; sourceTree = "<group>"; };
 		C62568612180493200E37A58 /* UINavigationBarX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UINavigationBarX.swift; path = Utilites/Classes/UINavigationBarX.swift; sourceTree = "<group>"; };
 		C66858442187103D0090307A /* PixelLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PixelLayoutConstraint.swift; path = Utilites/Classes/PixelLayoutConstraint.swift; sourceTree = "<group>"; };
+		C66858512187F0580090307A /* UITableViewCellX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITableViewCellX.swift; path = Utilites/Classes/UITableViewCellX.swift; sourceTree = "<group>"; };
 		C6B385CC2175D7190037298F /* UIDeviceX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceX.swift; path = Utilites/Classes/UIDeviceX.swift; sourceTree = "<group>"; };
 		C6B385CD2175D7190037298F /* UITabBarControllerX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarControllerX.swift; path = Utilites/Classes/UITabBarControllerX.swift; sourceTree = "<group>"; };
 		C6B385D22176D3200037298F /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewX.swift; path = Utilites/Classes/UIViewX.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				C625685F218024D200E37A58 /* UITabBarX.swift */,
 				C62568612180493200E37A58 /* UINavigationBarX.swift */,
 				C66858442187103D0090307A /* PixelLayoutConstraint.swift */,
+				C66858512187F0580090307A /* UITableViewCellX.swift */,
 				FDB82CD6364391C00BB40E1FE2017A76 /* Pod */,
 				3BC5F9400E457380849EEF65CD1B30E2 /* Support Files */,
 			);
@@ -384,6 +387,7 @@
 			files = (
 				C62568622180493200E37A58 /* UINavigationBarX.swift in Sources */,
 				B3BAC0D58B7B69FB94FC945A9500E144 /* Utilites.swift in Sources */,
+				C66858522187F0580090307A /* UITableViewCellX.swift in Sources */,
 				A5F561E80C8121B17334C54CE7297522 /* Utilites-dummy.m in Sources */,
 				C66858452187103D0090307A /* PixelLayoutConstraint.swift in Sources */,
 				C6256860218024D200E37A58 /* UITabBarX.swift in Sources */,
