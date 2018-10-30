@@ -241,7 +241,7 @@ import QuartzCore
 
 /*parent view*/
 extension UIView {
-    func parentView<T: UIView>(of type: T.Type) -> T? {
+    public func parentView<T: UIView>(of type: T.Type) -> T? {
         guard let view = self.superview else {
             return nil
         }

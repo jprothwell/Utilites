@@ -6,8 +6,8 @@
 //
 import UIKit
 
-extension UITableViewCell {
-    var tableView: UITableView? {
+@objc public extension UITableViewCell {
+    @objc public var tableView: UITableView? {
         return self.parentView(of: UITableView.self)
     }
 }
