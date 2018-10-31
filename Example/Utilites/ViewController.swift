@@ -28,12 +28,19 @@ class ViewController: UIViewController {
 
         self.view.addSubview(btn)
         
+        
     }
     
     @objc func onButton() -> Void {
-        self.tabBarController?.tabBar.hideTopLine()
+        //self.tabBarController?.tabBar.hideTopLine()
         
-        self.navigationController?.navigationBar.hideBottomLine()
+        //self.navigationController?.navigationBar.hideBottomLine()
+        
+        //self.tabBarController?.replaceViewController(UIViewController(), atIndex: 0)
+        
+        //self.tabBarController?.insertViewController(UIViewController(), atIndex: 0)
+        
+        self.tabBarController?.removeViewController(atIndex: 0)
     }
 
     override func didReceiveMemoryWarning() {
