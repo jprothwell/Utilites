@@ -15,6 +15,19 @@ import Foundation
         findLineImageViewIn(view: self)?.isHidden = false
     }
     
+    @objc public func makeTransparent(){
+        self.isTranslucent = true
+        self.setBackgroundImage(UIImage(), for: .default)
+        self.backgroundColor = .clear
+        self.shadowImage = UIImage()
+    }
+    @objc public func makeDefault(){
+        self.isTranslucent = false
+        self.setBackgroundImage(nil, for: .default)
+        self.backgroundColor = nil
+        self.shadowImage = nil
+    }
+    
     private func findLineImageViewIn(view:UIView) -> UIImageView? {
         if let iv = view as? UIImageView, iv.frame.height <= 1.0 {
             return iv
