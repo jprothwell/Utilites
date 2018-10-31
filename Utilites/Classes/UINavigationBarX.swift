@@ -5,7 +5,7 @@
 //  Created by LeonJing on 2018/10/24.
 //
 
-import Foundation
+import UIKit
 
 @objc public extension UINavigationBar {
     @objc public func hideBottomLine(){
