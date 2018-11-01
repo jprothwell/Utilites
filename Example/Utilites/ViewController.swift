@@ -13,6 +13,7 @@ import Utilites
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,7 +29,8 @@ class ViewController: UIViewController {
 
         self.view.addSubview(btn)
         
-        
+        let image = UIImage(named: "返回")?.withInsets(insetDimen: 10)
+        self.imageView.image = image
     }
     
     @objc func onButton() -> Void {

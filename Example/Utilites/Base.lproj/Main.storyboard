@@ -92,14 +92,34 @@
                                     </constraint>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="euw-3f-t7S">
+                                <rect key="frame" x="304" y="69" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="dBy-wk-uRS"/>
+                                    <constraint firstAttribute="width" secondItem="euw-3f-t7S" secondAttribute="height" id="okA-Z6-isS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ifM-35-EI9" firstAttribute="leading" secondItem="xTv-kp-q31" secondAttribute="leadingMargin" constant="100" id="IgK-sS-JnD"/>
+                            <constraint firstItem="euw-3f-t7S" firstAttribute="top" secondItem="9yQ-E6-sO0" secondAttribute="bottom" constant="5" id="YEq-5X-H4Q"/>
                             <constraint firstItem="ifM-35-EI9" firstAttribute="top" secondItem="9yQ-E6-sO0" secondAttribute="bottom" constant="100" id="nch-8v-3pd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="euw-3f-t7S" secondAttribute="trailing" constant="5" id="q1I-QC-eWl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="K2q-bm-hYw"/>
+                    <connections>
+                        <outlet property="imageView" destination="euw-3f-t7S" id="mbJ-Bi-mwS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBL-bA-qnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
