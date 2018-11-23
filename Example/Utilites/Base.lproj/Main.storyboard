@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ycB-BA-zZD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ycB-BA-zZD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -107,11 +107,45 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="添加" translatesAutoresizingMaskIntoConstraints="NO" id="fXg-IE-f7Q">
+                                <rect key="frame" x="167.5" y="275" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="FTZ-eH-GvN"/>
+                                    <constraint firstAttribute="height" constant="40" id="g6L-1h-TNp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJ5-0H-pZR">
+                                <rect key="frame" x="117.5" y="353" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="dUK-4T-LbA"/>
+                                    <constraint firstAttribute="height" constant="140" id="xa4-P3-J5e"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tJ5-0H-pZR" firstAttribute="centerX" secondItem="xTv-kp-q31" secondAttribute="centerX" id="BiM-gu-WlR"/>
+                            <constraint firstItem="tJ5-0H-pZR" firstAttribute="top" secondItem="fXg-IE-f7Q" secondAttribute="bottom" constant="38" id="EMB-eD-Nqk"/>
                             <constraint firstItem="ifM-35-EI9" firstAttribute="leading" secondItem="xTv-kp-q31" secondAttribute="leadingMargin" constant="100" id="IgK-sS-JnD"/>
                             <constraint firstItem="euw-3f-t7S" firstAttribute="top" secondItem="9yQ-E6-sO0" secondAttribute="bottom" constant="5" id="YEq-5X-H4Q"/>
+                            <constraint firstItem="fXg-IE-f7Q" firstAttribute="centerX" secondItem="xTv-kp-q31" secondAttribute="centerX" id="YUE-xN-2mv"/>
+                            <constraint firstItem="4Jv-BE-WeO" firstAttribute="top" secondItem="tJ5-0H-pZR" secondAttribute="bottom" constant="125" id="kwc-n0-Qcc"/>
                             <constraint firstItem="ifM-35-EI9" firstAttribute="top" secondItem="9yQ-E6-sO0" secondAttribute="bottom" constant="100" id="nch-8v-3pd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="euw-3f-t7S" secondAttribute="trailing" constant="5" id="q1I-QC-eWl"/>
                         </constraints>
@@ -119,6 +153,7 @@
                     <navigationItem key="navigationItem" id="K2q-bm-hYw"/>
                     <connections>
                         <outlet property="imageView" destination="euw-3f-t7S" id="mbJ-Bi-mwS"/>
+                        <outlet property="resizeImageView" destination="tJ5-0H-pZR" id="dws-kJ-Vaa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBL-bA-qnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,4 +198,7 @@
             <point key="canvasLocation" x="840.79999999999995" y="-578.86056971514245"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="添加" width="20" height="20"/>
+    </resources>
 </document>

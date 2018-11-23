@@ -29,4 +29,40 @@ import UIKit
         
         return imageWithInsets!
     }
+    
+    @objc public func resizeToFit(in size:CGSize) -> UIImage? {
+        let srcSize = self.size
+        var dstSize = CGSize.zero
+        var boundingSize = size
+        switch imageOrientation {
+        case .left,.right,.leftMirrored,.rightMirrored:
+            boundingSize = CGSize(width: size.height, height: size.width)
+        default:
+            break
+        }
+        
+        let wRatio:CGFloat = boundingSize.width / srcSize.width
+        let hRatio:CGFloat = boundingSize.height / srcSize.height
+        
+        if (wRatio < hRatio) {
+            dstSize = CGSize(width: boundingSize.width, height: CGFloat(floorf(Float(srcSize.height * wRatio))))
+        } else {
+            dstSize = CGSize(width: CGFloat(floorf(Float(srcSize.width * hRatio))), height: boundingSize.height)
+        }
+        
+        return resize(size:dstSize)
+    }
+    
+    @objc public func resize(size:CGSize) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, self.scale)
+
+        draw(in: CGRect(origin: .zero, size: size))
+        
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return resizedImage
+    }
+
 }

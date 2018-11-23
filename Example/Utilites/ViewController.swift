@@ -14,6 +14,7 @@ import Utilites
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var resizeImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,6 +32,8 @@ class ViewController: UIViewController {
         
         let image = UIImage(named: "返回")?.withInsets(insetDimen: 10)
         self.imageView.image = image
+        
+        resizeImageView.image = UIImage(named: "添加")!.resizeToFit(in: CGSize(width: 140, height: 5))
     }
     
     @objc func onButton() -> Void {
