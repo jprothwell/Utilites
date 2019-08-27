@@ -7,38 +7,38 @@ import QuartzCore
     /// X Axis value of UIView.
     @objc public var lj_x: CGFloat {
         set { self.frame = CGRect(x: _pixelIntegral(newValue),
-                                  y: self.y,
-                                  width: self.width,
-                                  height: self.height)
+                                  y: self.lj_y,
+                                  width: self.lj_width,
+                                  height: self.lj_height)
         }
         get { return self.frame.origin.x }
     }
     
     /// Y Axis value of UIView.
     @objc public var lj_y: CGFloat {
-        set { self.frame = CGRect(x: self.x,
+        set { self.frame = CGRect(x: self.lj_x,
                                   y: _pixelIntegral(newValue),
-                                  width: self.width,
-                                  height: self.height)
+                                  width: self.lj_width,
+                                  height: self.lj_height)
         }
         get { return self.frame.origin.y }
     }
     
     /// Width of view.
     @objc public var lj_width: CGFloat {
-        set { self.frame = CGRect(x: self.x,
-                                  y: self.y,
+        set { self.frame = CGRect(x: self.lj_x,
+                                  y: self.lj_y,
                                   width: _pixelIntegral(newValue),
-                                  height: self.height)
+                                  height: self.lj_height)
         }
         get { return self.frame.size.width }
     }
     
     /// Height of view.
     @objc public var lj_height: CGFloat {
-        set { self.frame = CGRect(x: self.x,
-                                  y: self.y,
-                                  width: self.width,
+        set { self.frame = CGRect(x: self.lj_x,
+                                  y: self.lj_y,
+                                  width: self.lj_width,
                                   height: _pixelIntegral(newValue))
         }
         get { return self.frame.size.height }
@@ -50,16 +50,16 @@ import QuartzCore
     @objc public var lj_origin: CGPoint {
         set { self.frame = CGRect(x: _pixelIntegral(newValue.x),
                                   y: _pixelIntegral(newValue.y),
-                                  width: self.width,
-                                  height: self.height)
+                                  width: self.lj_width,
+                                  height: self.lj_height)
         }
         get { return self.frame.origin }
     }
     
     /// View's size.
     @objc public var lj_size: CGSize {
-        set { self.frame = CGRect(x: self.x,
-                                  y: self.y,
+        set { self.frame = CGRect(x: self.lj_x,
+                                  y: self.lj_y,
                                   width: _pixelIntegral(newValue.width),
                                   height: _pixelIntegral(newValue.height))
         }
@@ -70,51 +70,51 @@ import QuartzCore
     
     /// View's right side (x + width).
     @objc public var lj_right: CGFloat {
-        set { self.x = newValue - self.width }
-        get { return self.x + self.width }
+        set { self.lj_x = newValue - self.lj_width }
+        get { return self.lj_x + self.lj_width }
     }
     
     /// View's bottom (y + height).
     @objc public var lj_bottom: CGFloat {
-        set { self.y = newValue - self.height }
-        get { return self.y + self.height }
+        set { self.lj_y = newValue - self.lj_height }
+        get { return self.lj_y + self.lj_height }
     }
     
     /// View's top (y).
     @objc public var lj_top: CGFloat {
-        set { self.y = newValue }
-        get { return self.y }
+        set { self.lj_y = newValue }
+        get { return self.lj_y }
     }
     
     /// View's left side (x).
     @objc public var lj_left: CGFloat {
-        set { self.x = newValue }
-        get { return self.x }
+        set { self.lj_x = newValue }
+        get { return self.lj_x }
     }
     
     /// View's center X value (center.x).
     @objc public var lj_centerX: CGFloat {
-        set { self.center = CGPoint(x: newValue, y: self.centerY) }
+        set { self.center = CGPoint(x: newValue, y: self.lj_centerY) }
         get { return self.center.x }
     }
     
     /// View's center Y value (center.y).
     @objc public var lj_centerY: CGFloat {
-        set { self.center = CGPoint(x: self.centerX, y: newValue) }
+        set { self.center = CGPoint(x: self.lj_centerX, y: newValue) }
         get { return self.center.y }
     }
     
     /// Last subview on X Axis.
     @objc public var lastSubviewOnX: UIView? {
         return self.subviews.reduce(UIView(frame: .zero)) {
-            return $1.x > $0.x ? $1 : $0
+            return $1.lj_x > $0.lj_x ? $1 : $0
         }
     }
     
     /// Last subview on Y Axis.
     @objc public var lastSubviewOnY: UIView? {
         return self.subviews.reduce(UIView(frame: .zero)) {
-            return $1.y > $0.y ? $1 : $0
+            return $1.lj_y > $0.lj_y ? $1 : $0
         }
     }
     
@@ -168,11 +168,11 @@ import QuartzCore
         
         switch UIApplication.shared.statusBarOrientation {
         case .landscapeLeft, .landscapeRight:
-            self.origin = CGPoint(x: (superview.height / 2) - (self.width / 2),
-                                  y: (superview.width / 2) - (self.height / 2))
+            self.lj_origin = CGPoint(x: (superview.lj_height / 2) - (self.lj_width / 2),
+                                  y: (superview.lj_width / 2) - (self.lj_height / 2))
         case .portrait, .portraitUpsideDown:
-            self.origin = CGPoint(x: (superview.width / 2) - (self.width / 2),
-                                  y: (superview.height / 2) - (self.height / 2))
+            self.lj_origin = CGPoint(x: (superview.lj_width / 2) - (self.lj_width / 2),
+                                  y: (superview.lj_height / 2) - (self.lj_height / 2))
         case .unknown:
             return
         }
