@@ -5,7 +5,7 @@ import QuartzCore
     // MARK: - Basic Properties
     
     /// X Axis value of UIView.
-    @objc public var x: CGFloat {
+    @objc public var lj_x: CGFloat {
         set { self.frame = CGRect(x: _pixelIntegral(newValue),
                                   y: self.y,
                                   width: self.width,
@@ -15,7 +15,7 @@ import QuartzCore
     }
     
     /// Y Axis value of UIView.
-    @objc public var y: CGFloat {
+    @objc public var lj_y: CGFloat {
         set { self.frame = CGRect(x: self.x,
                                   y: _pixelIntegral(newValue),
                                   width: self.width,
@@ -25,7 +25,7 @@ import QuartzCore
     }
     
     /// Width of view.
-    @objc public var width: CGFloat {
+    @objc public var lj_width: CGFloat {
         set { self.frame = CGRect(x: self.x,
                                   y: self.y,
                                   width: _pixelIntegral(newValue),
@@ -35,7 +35,7 @@ import QuartzCore
     }
     
     /// Height of view.
-    @objc public var height: CGFloat {
+    @objc public var lj_height: CGFloat {
         set { self.frame = CGRect(x: self.x,
                                   y: self.y,
                                   width: self.width,
@@ -47,7 +47,7 @@ import QuartzCore
     // MARK: - Origin and Size
     
     /// View's Origin point.
-    @objc public var origin: CGPoint {
+    @objc public var lj_origin: CGPoint {
         set { self.frame = CGRect(x: _pixelIntegral(newValue.x),
                                   y: _pixelIntegral(newValue.y),
                                   width: self.width,
@@ -57,7 +57,7 @@ import QuartzCore
     }
     
     /// View's size.
-    @objc public var size: CGSize {
+    @objc public var lj_size: CGSize {
         set { self.frame = CGRect(x: self.x,
                                   y: self.y,
                                   width: _pixelIntegral(newValue.width),
@@ -69,37 +69,37 @@ import QuartzCore
     // MARK: - Extra Properties
     
     /// View's right side (x + width).
-    @objc public var right: CGFloat {
+    @objc public var lj_right: CGFloat {
         set { self.x = newValue - self.width }
         get { return self.x + self.width }
     }
     
     /// View's bottom (y + height).
-    @objc public var bottom: CGFloat {
+    @objc public var lj_bottom: CGFloat {
         set { self.y = newValue - self.height }
         get { return self.y + self.height }
     }
     
     /// View's top (y).
-    @objc public var top: CGFloat {
+    @objc public var lj_top: CGFloat {
         set { self.y = newValue }
         get { return self.y }
     }
     
     /// View's left side (x).
-    @objc public var left: CGFloat {
+    @objc public var lj_left: CGFloat {
         set { self.x = newValue }
         get { return self.x }
     }
     
     /// View's center X value (center.x).
-    @objc public var centerX: CGFloat {
+    @objc public var lj_centerX: CGFloat {
         set { self.center = CGPoint(x: newValue, y: self.centerY) }
         get { return self.center.x }
     }
     
     /// View's center Y value (center.y).
-    @objc public var centerY: CGFloat {
+    @objc public var lj_centerY: CGFloat {
         set { self.center = CGPoint(x: self.centerX, y: newValue) }
         get { return self.center.y }
     }
@@ -188,7 +188,7 @@ import QuartzCore
 
 @IBDesignable @objc public extension UIView {
     
-    @IBInspectable var cornerRadius: CGFloat {
+    @IBInspectable var lj_cornerRadius: CGFloat {
         get {
             return self.layer.cornerRadius
         }
@@ -198,7 +198,7 @@ import QuartzCore
         }
     }
     
-    @IBInspectable var borderColor: UIColor? {
+    @IBInspectable var lj_borderColor: UIColor? {
         get {
             return UIColor(cgColor: self.layer.borderColor!)
         }
@@ -207,7 +207,7 @@ import QuartzCore
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable var lj_borderWidth: CGFloat {
         get {
             return self.layer.borderWidth
         }
