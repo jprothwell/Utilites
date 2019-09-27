@@ -65,14 +65,16 @@ import UIKit
         return resizedImage
     }
     
-    convenience init(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+    convenience init(pixelColor: UIColor) {
+        let size = CGSize(width: 1, height: 1)
+        
         UIGraphicsBeginImageContextWithOptions(size, false, 1)
 
         defer {
             UIGraphicsEndImageContext()
         }
 
-        color.setFill()
+        pixelColor.setFill()
         UIRectFill(CGRect(origin: .zero, size: size))
 
         guard let aCgImage = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
