@@ -9,11 +9,11 @@ import UIKit
 
 @objc public extension UIImage {
     
-    @objc public func withInsets(insetDimen: CGFloat) -> UIImage {
+    @objc func withInsets(insetDimen: CGFloat) -> UIImage {
         return withInsets(insets: UIEdgeInsets(top: insetDimen, left: insetDimen, bottom: insetDimen, right: insetDimen))
     }
     
-    @objc public func withInsets(insets: UIEdgeInsets) -> UIImage {
+    @objc func withInsets(insets: UIEdgeInsets) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(
             CGSize(
                 width: self.size.width + insets.left + insets.right,
@@ -30,7 +30,7 @@ import UIKit
         return imageWithInsets!
     }
     
-    @objc public func resizeToFit(in size:CGSize) -> UIImage? {
+    @objc func resizeToFit(in size:CGSize) -> UIImage? {
         let srcSize = self.size
         var dstSize = CGSize.zero
         var boundingSize = size
@@ -53,7 +53,7 @@ import UIKit
         return resize(size:dstSize)
     }
     
-    @objc public func resize(size:CGSize) -> UIImage? {
+    @objc func resize(size:CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, self.scale)
 
         draw(in: CGRect(origin: .zero, size: size))
@@ -64,5 +64,23 @@ import UIKit
         
         return resizedImage
     }
+    
+    convenience init(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+        UIGraphicsBeginImageContextWithOptions(size, false, 1)
 
+        defer {
+            UIGraphicsEndImageContext()
+        }
+
+        color.setFill()
+        UIRectFill(CGRect(origin: .zero, size: size))
+
+        guard let aCgImage = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
+            self.init()
+            return
+        }
+
+        self.init(cgImage: aCgImage)
+    }
+    
 }
