@@ -50,6 +50,7 @@ Uitls of eveything !
   
   s.subspec 'UITableViewCell' do |ss|
     ss.source_files = 'Utilites/Classes/UITableViewCellX.swift'
+    ss.dependency 'Utilites/UIView'
   end
   
   s.subspec 'UIImage' do |ss|
