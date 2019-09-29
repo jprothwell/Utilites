@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Utilites'
-  s.version          = '0.5.1'
+  s.version          = '0.5.2'
   s.summary          = 'Awesome Utilites.'
 
   s.description      = <<-DESC
@@ -24,7 +24,39 @@ Uitls of eveything !
   s.swift_version = '4.2'
   s.source_files = 'Utilites/Classes/**/*'
   
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'Utilites/Classes/Utilites.swift'
+  end
+  
   s.subspec 'UIView' do |ss|
     ss.source_files = 'Utilites/Classes/UIViewX.swift'
+  end
+  
+  s.subspec 'UIDevice' do |ss|
+    ss.source_files = 'Utilites/Classes/UIDeviceX.swift'
+  end
+  
+  s.subspec 'UITabBarController' do |ss|
+    ss.source_files = 'Utilites/Classes/UITabBarControllerX.swift'
+  end
+  
+  s.subspec 'UITabBar' do |ss|
+    ss.source_files = 'Utilites/Classes/UITabBarX.swift'
+  end
+  
+  s.subspec 'UINavigationBar' do |ss|
+    ss.source_files = 'Utilites/Classes/UINavigationBarX.swift'
+  end
+  
+  s.subspec 'UITableViewCell' do |ss|
+    ss.source_files = 'Utilites/Classes/UITableViewCellX.swift'
+  end
+  
+  s.subspec 'UIImage' do |ss|
+    ss.source_files = 'Utilites/Classes/UIImageX.swift'
+  end
+  
+  s.subspec 'PixelLayoutConstraint' do |ss|
+    ss.source_files = 'Utilites/Classes/PixelLayoutConstraint.swift'
   end
 end
