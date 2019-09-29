@@ -8,20 +8,20 @@
 import UIKit
 
 @objc public extension UINavigationBar {
-    @objc public func hideBottomLine(){
+    @objc func hideBottomLine(){
         findLineImageViewIn(view: self)?.isHidden = true
     }
-    @objc public func showBottomLine(){
+    @objc func showBottomLine(){
         findLineImageViewIn(view: self)?.isHidden = false
     }
     
-    @objc public func makeTransparent(){
+    @objc func makeTransparent(){
         self.isTranslucent = true
         self.setBackgroundImage(UIImage(), for: .default)
         self.backgroundColor = .clear
         self.shadowImage = UIImage()
     }
-    @objc public func makeDefault(){
+    @objc func makeDefault(){
         self.isTranslucent = false
         self.setBackgroundImage(nil, for: .default)
         self.backgroundColor = nil

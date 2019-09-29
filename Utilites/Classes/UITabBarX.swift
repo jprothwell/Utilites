@@ -8,10 +8,10 @@
 import UIKit
 
 @objc public extension UITabBar {
-    @objc public func hideTopLine(){
+    @objc func hideTopLine(){
         findLineImageViewIn(view: self)?.isHidden = true
     }
-    @objc public func showTopLine(){
+    @objc func showTopLine(){
         findLineImageViewIn(view: self)?.isHidden = false
     }
     
