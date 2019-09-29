@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Utilites'
+  s.name             = 'x'
   s.version          = '0.5.3'
-  s.summary          = 'X Man'
+  s.summary          = 'Awesome Utilites.'
 
   s.description      = <<-DESC
 Uitls of eveything !
@@ -50,7 +50,7 @@ Uitls of eveything !
   
   s.subspec 'UITableViewCell' do |ss|
     ss.source_files = 'Utilites/Classes/UITableViewCellX.swift'
-    ss.dependency 'Utilites/UIView'
+    ss.dependency 'x/UIView'
   end
   
   s.subspec 'UIImage' do |ss|
