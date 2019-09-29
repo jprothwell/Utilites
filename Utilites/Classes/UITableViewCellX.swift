@@ -7,7 +7,7 @@
 import UIKit
 
 @objc public extension UITableViewCell {
-    @objc public var tableView: UITableView? {
+    @objc var tableView: UITableView? {
         return self.parentView(of: UITableView.self)
     }
 }

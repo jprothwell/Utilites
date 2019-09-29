@@ -5,7 +5,7 @@ import QuartzCore
     // MARK: - Basic Properties
     
     /// X Axis value of UIView.
-    @objc public var lj_x: CGFloat {
+    @objc var lj_x: CGFloat {
         set { self.frame = CGRect(x: _pixelIntegral(newValue),
                                   y: self.lj_y,
                                   width: self.lj_width,
@@ -15,7 +15,7 @@ import QuartzCore
     }
     
     /// Y Axis value of UIView.
-    @objc public var lj_y: CGFloat {
+    @objc var lj_y: CGFloat {
         set { self.frame = CGRect(x: self.lj_x,
                                   y: _pixelIntegral(newValue),
                                   width: self.lj_width,
@@ -25,7 +25,7 @@ import QuartzCore
     }
     
     /// Width of view.
-    @objc public var lj_width: CGFloat {
+    @objc var lj_width: CGFloat {
         set { self.frame = CGRect(x: self.lj_x,
                                   y: self.lj_y,
                                   width: _pixelIntegral(newValue),
@@ -35,7 +35,7 @@ import QuartzCore
     }
     
     /// Height of view.
-    @objc public var lj_height: CGFloat {
+    @objc var lj_height: CGFloat {
         set { self.frame = CGRect(x: self.lj_x,
                                   y: self.lj_y,
                                   width: self.lj_width,
@@ -47,7 +47,7 @@ import QuartzCore
     // MARK: - Origin and Size
     
     /// View's Origin point.
-    @objc public var lj_origin: CGPoint {
+    @objc var lj_origin: CGPoint {
         set { self.frame = CGRect(x: _pixelIntegral(newValue.x),
                                   y: _pixelIntegral(newValue.y),
                                   width: self.lj_width,
@@ -57,7 +57,7 @@ import QuartzCore
     }
     
     /// View's size.
-    @objc public var lj_size: CGSize {
+    @objc var lj_size: CGSize {
         set { self.frame = CGRect(x: self.lj_x,
                                   y: self.lj_y,
                                   width: _pixelIntegral(newValue.width),
@@ -69,50 +69,50 @@ import QuartzCore
     // MARK: - Extra Properties
     
     /// View's right side (x + width).
-    @objc public var lj_right: CGFloat {
+    @objc var lj_right: CGFloat {
         set { self.lj_x = newValue - self.lj_width }
         get { return self.lj_x + self.lj_width }
     }
     
     /// View's bottom (y + height).
-    @objc public var lj_bottom: CGFloat {
+    @objc var lj_bottom: CGFloat {
         set { self.lj_y = newValue - self.lj_height }
         get { return self.lj_y + self.lj_height }
     }
     
     /// View's top (y).
-    @objc public var lj_top: CGFloat {
+    @objc var lj_top: CGFloat {
         set { self.lj_y = newValue }
         get { return self.lj_y }
     }
     
     /// View's left side (x).
-    @objc public var lj_left: CGFloat {
+    @objc var lj_left: CGFloat {
         set { self.lj_x = newValue }
         get { return self.lj_x }
     }
     
     /// View's center X value (center.x).
-    @objc public var lj_centerX: CGFloat {
+    @objc var lj_centerX: CGFloat {
         set { self.center = CGPoint(x: newValue, y: self.lj_centerY) }
         get { return self.center.x }
     }
     
     /// View's center Y value (center.y).
-    @objc public var lj_centerY: CGFloat {
+    @objc var lj_centerY: CGFloat {
         set { self.center = CGPoint(x: self.lj_centerX, y: newValue) }
         get { return self.center.y }
     }
     
     /// Last subview on X Axis.
-    @objc public var lastSubviewOnX: UIView? {
+    @objc var lastSubviewOnX: UIView? {
         return self.subviews.reduce(UIView(frame: .zero)) {
             return $1.lj_x > $0.lj_x ? $1 : $0
         }
     }
     
     /// Last subview on Y Axis.
-    @objc public var lastSubviewOnY: UIView? {
+    @objc var lastSubviewOnY: UIView? {
         return self.subviews.reduce(UIView(frame: .zero)) {
             return $1.lj_y > $0.lj_y ? $1 : $0
         }
@@ -121,7 +121,7 @@ import QuartzCore
     // MARK: - Bounds Methods
     
     /// X value of bounds (bounds.origin.x).
-    @objc public var boundsX: CGFloat {
+    @objc var boundsX: CGFloat {
         set { self.bounds = CGRect(x: _pixelIntegral(newValue),
                                    y: self.boundsY,
                                    width: self.boundsWidth,
@@ -131,7 +131,7 @@ import QuartzCore
     }
     
     /// Y value of bounds (bounds.origin.y).
-    @objc public var boundsY: CGFloat {
+    @objc var boundsY: CGFloat {
         set { self.frame = CGRect(x: self.boundsX,
                                   y: _pixelIntegral(newValue),
                                   width: self.boundsWidth,
@@ -141,7 +141,7 @@ import QuartzCore
     }
     
     /// Width of bounds (bounds.size.width).
-    @objc public var boundsWidth: CGFloat {
+    @objc var boundsWidth: CGFloat {
         set { self.frame = CGRect(x: self.boundsX,
                                   y: self.boundsY,
                                   width: _pixelIntegral(newValue),
@@ -151,7 +151,7 @@ import QuartzCore
     }
     
     /// Height of bounds (bounds.size.height).
-    @objc public var boundsHeight: CGFloat {
+    @objc var boundsHeight: CGFloat {
         set { self.frame = CGRect(x: self.boundsX,
                                   y: self.boundsY,
                                   width: self.boundsWidth,
@@ -163,7 +163,7 @@ import QuartzCore
     // MARK: - Useful Methods
     
     /// Center view to it's parent view.
-    @objc public func centerToParent() {
+    @objc func centerToParent() {
         guard let superview = self.superview else { return }
         
         switch UIApplication.shared.statusBarOrientation {
@@ -220,7 +220,7 @@ import QuartzCore
 
 @objc public extension UIView {
     
-    @objc public func roundCorner(rectCorner:UIRectCorner = .allCorners,radius:CGFloat) -> Void {
+    @objc func roundCorner(rectCorner:UIRectCorner = .allCorners,radius:CGFloat) -> Void {
         let rect = self.bounds
         let maskPath = UIBezierPath(roundedRect: rect, byRoundingCorners: rectCorner, cornerRadii: CGSize(width: radius, height: radius))
         let maskLayer = CAShapeLayer()
@@ -231,10 +231,10 @@ import QuartzCore
 }
 
 @objc public extension UIView {
-    @objc public func addSubviews(_ subviews: [UIView]) {
+    @objc func addSubviews(_ subviews: [UIView]) {
         subviews.forEach { addSubview($0) }
     }
-    @objc public func removeSubviews() {
+    @objc func removeSubviews() {
         subviews.forEach({ $0.removeFromSuperview() })
     }
 }
